@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1001,
+    "title": "Login button not responding on mobile app",
+    "description": "When I tap the login button on Android, nothing happens. iOS works fine. Already tried clearing cache and reinstalling.",
+    "customer": "Sarah Kim",
+    "priority": "high",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1002,
+    "title": "Payment failed but money was deducted",
+    "description": "Tried to upgrade to premium plan, got error 'transaction declined' but my bank shows money was taken.",
+    "customer": "Michael Tan",
+    "priority": "urgent",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1003,
+    "title": "Cannot upload profile picture",
+    "description": "Every time I try to change my avatar it says 'file too large' even though it's only 180 KB.",
+    "customer": "Rajesh Patel",
+    "priority": "medium",
+    "status": "in-progress",
+    "createdAt": "2025-10-17"
+  },
+  {
+    "id": 1004,
+    "title": "Feature request: Dark mode for web version",
+    "description": "Love the product but staring at white background at night hurts my eyes. Dark mode would be amazing.",
+    "customer": "Emma Wong",
+    "priority": "low",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1005,
+    "title": "Account suspended without reason",
+    "description": "My account was suddenly suspended. I didn't receive any email or notification. Need urgent help.",
+    "customer": "Ahmad Rizal",
+    "priority": "urgent",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1006,
+    "title": "Notifications not working anymore",
+    "description": "Stopped receiving push notifications and email alerts about new messages 3 days ago.",
+    "customer": "Lisa Chen",
+    "priority": "medium",
+    "status": "in-progress",
+    "createdAt": "2025-10-16"
+  },
+  {
+    "id": 1007,
+    "title": "Refund request for annual subscription",
+    "description": "I accidentally renewed for another year. Please cancel and refund if possible.",
+    "customer": "David Lim",
+    "priority": "high",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1008,
+    "title": "Search is extremely slow",
+    "description": "Searching for anything takes 8–12 seconds. Used to be instant. Happening on both app and browser.",
+    "customer": "Priya Sharma",
+    "priority": "high",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1009,
+    "title": "Two-factor authentication setup failed",
+    "description": "QR code scanning works but then it says 'invalid code' when I enter the 6-digit number.",
+    "customer": "Jonathan Ho",
+    "priority": "medium",
+    "status": "in-progress",
+    "createdAt": "2025-10-17"
+  },
+  {
+    "id": 1010,
+    "title": "Billing address cannot be updated",
+    "description": "Keep getting 'invalid format' error when trying to change billing address.",
+    "customer": "Grace Ng",
+    "priority": "medium",
+    "status": "open",
+    "createdAt": "2025-10-17"
+  },
+  {
+    "id": 1011,
+    "title": "App keeps crashing on iPhone 15",
+    "description": "Crashes every time I open the chat screen. No issue on iPad or Android.",
+    "customer": "Benjamin Yeo",
+    "priority": "high",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1012,
+    "title": "Wrong currency displayed in checkout",
+    "description": "Shows SGD but I'm in Malaysia and want MYR. No option to change.",
+    "customer": "Nurul Aisyah",
+    "priority": "medium",
+    "status": "in-progress",
+    "createdAt": "2025-10-17"
+  },
+  {
+    "id": 1013,
+    "title": "Cannot attach files larger than 5MB",
+    "description": "Error says max 25MB but anything above 5MB fails to upload.",
+    "customer": "Kevin Wong",
+    "priority": "medium",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1014,
+    "title": "Ticket closed automatically – issue not solved",
+    "description": "My previous ticket #987 was closed after 72 hours but problem still exists.",
+    "customer": "Amelia Tan",
+    "priority": "high",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1015,
+    "title": "Request to delete my account",
+    "description": "Please permanently delete my account and all associated data.",
+    "customer": "Ali Bin Ismail",
+    "priority": "low",
+    "status": "in-progress",
+    "createdAt": "2025-10-17"
+  },
+  {
+    "id": 1016,
+    "title": "Team inbox not syncing new messages",
+    "description": "New customer messages are not appearing in the team dashboard for the past 4 hours.",
+    "customer": "Support Team Lead",
+    "priority": "urgent",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1017,
+    "title": "Video call quality very poor",
+    "description": "Constant freezing and pixelation even with good internet (300 Mbps).",
+    "customer": "Olivia Lim",
+    "priority": "medium",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1018,
+    "title": "Incorrect subscription expiry date",
+    "description": "Dashboard shows expiry in 3 days but I renewed last week for another year.",
+    "customer": "Ryan Pham",
+    "priority": "high",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  },
+  {
+    "id": 1019,
+    "title": "Language switcher not saving preference",
+    "description": "Every time I change to Chinese it reverts to English after refresh.",
+    "customer": "Wei Zhang",
+    "priority": "low",
+    "status": "open",
+    "createdAt": "2025-10-17"
+  },
+  {
+    "id": 1020,
+    "title": "Cannot reset password – email never arrives",
+    "description": "Requested password reset 3 times. Nothing in inbox or spam folder.",
+    "customer": "Isabella Chen",
+    "priority": "high",
+    "status": "open",
+    "createdAt": "2025-10-18"
+  }
+]

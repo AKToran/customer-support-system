@@ -21,7 +21,7 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className="relative flex-1 text-center bg-linear-to-r from-green-400 to-green-600 p-10 rounded-xl">
+      <div className="relative flex-1 text-center bg-linear-to-r from-green-500 to-green-700 p-10 rounded-xl">
         <div
           className={`absolute inset-0 bg-no-repeat bg-left bg-contain`}
           style={{ backgroundImage: `url(${bg1})` }}
