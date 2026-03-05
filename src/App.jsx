@@ -11,8 +11,8 @@ function App() {
   useEffect(()=>{
     fetch("/data.json")
     .then(res=> res.json())
-    .then(data => console.log(data))
-    .catch(err=> console.log(err))
+    .then(data => setTickets(data))
+    .catch(err=> alert(err))
   },[])
 
   return (
@@ -21,9 +21,9 @@ function App() {
       <main className="p-8 lg:p-18 bg-slate-100">
         <Banner/>
 
-        <section className='grid grid-cols-1 lg:grid-cols-4 pt-4 lg:pt-12'>
+        <section className='grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-4 pt-4 lg:pt-12'>
           <section className='col-span-3'>
-            <Tickets/>
+            <Tickets tickets={tickets}/>
           </section>
 
           <section>

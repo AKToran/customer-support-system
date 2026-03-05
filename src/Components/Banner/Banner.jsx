@@ -16,8 +16,8 @@ const Banner = () => {
         ></div>
 
         <div className="relative">
-          <h2 className="text-3xl">In-Progress</h2>
-          <h1 className="text-6xl m-4">0</h1>
+          <h2 className="text-2xl">In-Progress</h2>
+          <h1 className="text-6xl m-4 font-semibold">0</h1>
         </div>
       </div>
 
@@ -32,8 +32,8 @@ const Banner = () => {
         ></div>
 
         <div>
-          <h2 className="text-3xl">Resolved</h2>
-          <h1 className="text-6xl m-4">0</h1>
+          <h2 className="text-2xl">Resolved</h2>
+          <h1 className="text-6xl m-4 font-semibold">0</h1>
         </div>
       </div>
     </div>
