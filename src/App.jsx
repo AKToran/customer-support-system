@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Status from "./Components/Status/Status";
 import Tickets from "./Components/Tickets/Tickets";
 import { toast, ToastContainer } from "react-toastify";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [tickets, setTickets] = useState([]);
@@ -67,6 +68,7 @@ function App() {
           </section>
         </section>
       </main>
+      <Footer/>
 
       <ToastContainer
         position="top-right"
