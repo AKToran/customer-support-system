@@ -2,7 +2,7 @@ import React from "react";
 import bg1 from "../../assets/vector1.png";
 import bg2 from "../../assets/vector2.png";
 
-const Banner = () => {
+const Banner = ({progressCount, resolvedCount}) => {
   return (
     <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 text-white">
       <div className="relative flex-1 text-center bg-linear-to-r from-purple-600 to-purple-400 p-10 rounded-xl">
@@ -17,7 +17,7 @@ const Banner = () => {
 
         <div className="relative">
           <h2 className="text-2xl">In-Progress</h2>
-          <h1 className="text-6xl m-4 font-semibold">0</h1>
+          <h1 className="text-6xl m-4 font-semibold">{progressCount}</h1>
         </div>
       </div>
 
@@ -33,7 +33,7 @@ const Banner = () => {
 
         <div>
           <h2 className="text-2xl">Resolved</h2>
-          <h1 className="text-6xl m-4 font-semibold">0</h1>
+          <h1 className="text-6xl m-4 font-semibold">{resolvedCount}</h1>
         </div>
       </div>
     </div>

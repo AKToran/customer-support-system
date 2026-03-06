@@ -2,9 +2,9 @@ import React from "react";
 import { GoDotFill } from "react-icons/go";
 import { SlCalender } from "react-icons/sl";
 
-const Ticket = ({ ticket }) => {
+const Ticket = ({ ticket, handleTicketClick }) => {
   return (
-    <div className="bg-white p-3 rounded-md flex flex-col justify-between gap-1 cursor-pointer shadow-xl">
+    <div onClick={()=>handleTicketClick(ticket)} className="bg-white p-3 rounded-md flex flex-col justify-between gap-1 cursor-pointer shadow-xl">
       <div className="flex justify-between gap-2">
         <h3 className="font-bold">{ticket.title}</h3>
         <div>
@@ -26,9 +26,13 @@ const Ticket = ({ ticket }) => {
         <div className="flex items-center gap-2 lg:gap-4">
           <p>#{ticket.id}</p>
           <p>
-            {
-            ticket.priority === "high"? <span className="text-amber-500 font-semibold">HIGH</span> : ticket.priority === "urgent"? <span className="text-red-500 font-semibold">URGENT</span> : <span className="text-green-400 font-semibold">MEDIUM</span>
-          }
+            {ticket.priority === "high" ? (
+              <span className="text-amber-500 font-semibold">HIGH</span>
+            ) : ticket.priority === "urgent" ? (
+              <span className="text-red-500 font-semibold">URGENT</span>
+            ) : (
+              <span className="text-green-400 font-semibold">MEDIUM</span>
+            )}
           </p>
         </div>
         <div className="flex items-center gap-4">

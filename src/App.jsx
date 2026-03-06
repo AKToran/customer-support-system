@@ -1,40 +1,69 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import Banner from './Components/Banner/Banner'
-import Navbar from "./Components/Navbar/Navbar"
-import Status from './Components/Status/Status'
-import Tickets from './Components/Tickets/Tickets'
+import { useEffect, useState } from "react";
+import "./App.css";
+import Banner from "./Components/Banner/Banner";
+import Navbar from "./Components/Navbar/Navbar";
+import Status from "./Components/Status/Status";
+import Tickets from "./Components/Tickets/Tickets";
 
 function App() {
   const [tickets, setTickets] = useState([]);
+  const [progressCount, setProgressCount] = useState(0);
+  const [resolvedCount, setResolvedCount] = useState(0);
+  const [inProgressTickets, setInProgressTickets] = useState([]);
+  const [resolvedTickets, setResolvedTickets] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch("/data.json")
-    .then(res=> res.json())
-    .then(data => setTickets(data))
-    .catch(err=> alert(err))
-  },[])
+      .then((res) => res.json())
+      .then((data) => setTickets(data))
+      .catch((err) => alert(err));
+  }, []);
+
+  const handleTicketClick = (ticket) => {
+    ticket.status = "in-progress"
+    setProgressCount(progressCount + 1);
+    const newInProgressTickets = [...inProgressTickets, ticket];
+    setInProgressTickets(newInProgressTickets);
+  };
+
+  const handleResolvedTickets = (id) => {
+    setResolvedCount(resolvedCount + 1);
+    setProgressCount(progressCount - 1);
+    const newInProgressTickets = inProgressTickets.filter(
+      (ticket) => ticket.id !== id,
+    );
+    setInProgressTickets(newInProgressTickets);
+
+    const newResolvedTicket = tickets.find(ticket => ticket.id === id);
+    // const newResolvedTickets = [...resolvedTickets, newResolvedTicket]
+    setResolvedTickets([...resolvedTickets, newResolvedTicket]);
+
+    const newTickets = tickets.filter(ticket => ticket.id !== id);
+    setTickets(newTickets);
+  };
 
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <main className="p-8 lg:p-18 bg-slate-100">
-        <Banner/>
+        <Banner resolvedCount={resolvedCount} progressCount={progressCount} />
 
-        <section className='grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-4 pt-4 lg:pt-12'>
-          <section className='col-span-3'>
-            <Tickets tickets={tickets}/>
+        <section className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-4 pt-4 lg:pt-12">
+          <section className="col-span-3">
+            <Tickets tickets={tickets} handleTicketClick={handleTicketClick} />
           </section>
 
           <section>
-            <Status/>
+            <Status
+              inProgressTickets={inProgressTickets}
+              handleResolvedTickets={handleResolvedTickets}
+              resolvedTickets={resolvedTickets}
+            />
           </section>
         </section>
       </main>
-      
-      
     </>
-  )
+  );
 }
 
-export default App
+export default App;
