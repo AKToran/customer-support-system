@@ -1,16 +1,15 @@
-# React + Vite
+1. What is JSX, and why is it used?  
+-> JSX or JavaScript XML is the markup language used in React. It is HTML like code written directly inside JS files. It is used to build and structure UI components.    
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. What is the difference between State and Props?    
+-> State and Props both are used to pass data in React components. The difference between them are: State has bidirectional data flow. State is passed from the parent to child, it is changeable in the child component. Based on changes in the child component changes can be done in the parent component. Props are used for unidirectional data flow that doesn't need any changing. Data is passed from parent to child, it cannot be changed in the child component. 
 
-Currently, two official plugins are available:
+3. What is the useState hook, and how does it work?   
+-> useState hook is used to manage reactive state of functional components. It provides a variable to hold a value and a setter function to set the value of the variable. When a setter function is called to change the value, React re-renders the component related to that value.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4. How can you share state between components in React?    
+-> We can share state between components in React by passing state variable and state setter function as props. It is best to write the useState hook in the parent component so that it is easier to pass the state to child components easily.   
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+5. How is event handling done in React?  
+-> Event handling in React is done by writing inline event handler which is written in camel case. We pass the handler function to the event handler. When we need to pass any arguments to the handler function we wrap the handler function with an arrow function so that it doesn't get executed while rendering the component.   
+  
